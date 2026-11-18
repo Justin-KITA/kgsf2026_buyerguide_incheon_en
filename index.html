@@ -16276,8 +16276,8 @@ const CONFIG = {
           {
             "id": "incheon", "tab": "Incheon", "date": "Nov 23", "title": "Incheon meeting day",
             "items": [
-              { "id": "i0", "text": "Check out and be at the Grand Ballroom (2F) by 08:30 with all your luggage", "link": "program", "todo": ["program"] },
-              { "id": "i1", "text": "Briefing with your interpreter · 08:30–09:00", "link": "program", "todo": [] },
+              { "id": "i0", "text": "Check out and be at the Grand Ballroom (2F) by 08:45 with all your luggage", "link": "program", "todo": ["program"] },
+              { "id": "i1", "text": "Briefing with your interpreter · 08:45–09:00", "link": "program", "todo": [] },
               { "id": "i2", "text": "Morning meetings · Grand Ballroom (2F) · 09:00–12:00", "link": "program", "todo": [] },
               { "id": "i3", "text": "Buyer welcome luncheon · Multi Room (2F) · 12:00–13:00", "link": "program", "todo": [] },
               { "id": "i4", "text": "Afternoon meetings · 13:30–17:30", "link": "program", "todo": [] },
@@ -16324,7 +16324,7 @@ const CONFIG = {
               },
               {
                 "icon": "meet", "date": "Nov 23 (Mon)", "title": "Incheon meetings",
-                "must": { "time": "08:30", "place": "Grand Ballroom (2F)", "where": "Holiday Inn Incheon Songdo", "note": "[!Bring all your luggage]" },
+                "must": { "time": "08:45", "place": "Grand Ballroom (2F)", "where": "Holiday Inn Incheon Songdo", "note": "[!Bring all your luggage]" },   /* v167 08:30 → 08:45 */
                 "link": { "label": "Timetable", "section": "matching" }
               },
               {
@@ -16357,10 +16357,10 @@ const CONFIG = {
             ],
             "rows": ["06:30", "08:30", "09:00", "12:00", "13:30", "18:00"],
             "blocks": [
-              { "col": 1, "row": 1, "span": 6, "tag": "move", "title": "Incheon Airport → Incheon hotel", "note": "Airport pick-up service · taxi to the hotel · check-in on arrival" },
+              { "col": 1, "row": 1, "span": 6, "tag": "move", "title": "Incheon Airport → Incheon hotel", "note": "Airport pick-up service · taxi to the hotel · check-in from 15:00 [!No early check‑in]" },   /* v167 */
 
-              { "col": 2, "row": 1, "time": "By 08:30", "tag": "stay", "key": true, "title": "Hotel check-out", "note": "Bring all your luggage to the Grand Ballroom (2F)" },
-              { "col": 2, "row": 2, "time": "08:30–09:00", "tag": "info", "title": "Briefing with your interpreter" },
+              { "col": 2, "row": 1, "time": "By 08:45", "tag": "stay", "key": true, "title": "Hotel check-out", "note": "Bring all your luggage to the Grand Ballroom (2F)" },   /* v167 08:30 → 08:45 */
+              { "col": 2, "row": 2, "time": "08:45–09:00", "tag": "info", "title": "Briefing with your interpreter" },
               { "col": 2, "row": 3, "time": "09:00–12:00", "tag": "meeting", "title": "Morning business meetings", "note": "Grand Ballroom (2F)" },
               { "col": 2, "row": 4, "time": "12:00–13:00", "tag": "meal", "title": "Buyer welcome luncheon", "note": "Multi Room (2F)" },
               { "col": 2, "row": 5, "time": "13:30–17:30", "tag": "meeting", "title": "Afternoon business meetings", "note": "Grand Ballroom (2F)" },
@@ -16376,6 +16376,7 @@ const CONFIG = {
             ],
             "notes": [
               { "tag": "move", "text": "Nov 22 · Pick-up service at Incheon Airport Terminals 1 and 2. Staff will take you to a taxi for your Incheon hotel.", "link": { "label": "View Airport Arrival", "section": "airport" } },
+              { "tag": "stay", "text": "Nov 22 · Hotel check-in from 15:00. [!Early check‑in is not available.]", "link": { "label": "View Hotel", "section": "hotel" } },   /* v167 인천 호텔 */
               { "tag": "stay", "key": true, "text": "Nov 23 · Check out before the meetings and bring all your luggage to the meeting hall.", "link": { "label": "View Transportation", "section": "shuttle" } },
               { "tag": "meeting", "text": "Business meetings · Nov 23 at Holiday Inn Incheon Songdo, Grand Ballroom (2F) · Nov 24–25 at COEX Hall D, 3F.", "link": { "label": "View My Meetings", "section": "matching" } },
               { "tag": "meal", "text": "Nov 23 · Buyer welcome luncheon (Western set menu). Requested dietary options (seafood-free · beef-free) will be provided.", "link": { "label": "View Dining", "section": "venue#incheon-dining" } },
@@ -16415,8 +16416,8 @@ const CONFIG = {
                   { "session": "8th", "time": "16:00–16:40" },
                   { "session": "9th", "time": "16:50–17:30" }
                 ],
-                /* v128 표 아래: 08:30 도착 · 통역사 사전 미팅 (표의 사전 미팅 줄 대신) */
-                "note": "Arrive at the **Grand Ballroom (2F) by 08:30** for a briefing with your assigned interpreter."
+                /* v128 표 아래: 도착 · 통역사 사전 미팅 (표의 사전 미팅 줄 대신) — v167 08:30 → 08:45 */
+                "note": "Arrive at the **Grand Ballroom (2F) by 08:45** for a briefing with your assigned interpreter."
               },
               {
                 "title": "SEOUL", "date": "Nov 24–25 (Tue–Wed) · same on both days", "where": "COEX Hall D, 3F", "place": "Seoul",
@@ -16624,6 +16625,10 @@ const CONFIG = {
                         "1 night"
                       ],
                       [
+                        "Early check-in",
+                        "[!Not available]"
+                      ],
+                      [
                         "Lobby & front desk",
                         "19F"
                       ]
@@ -16734,7 +16739,7 @@ const CONFIG = {
                       ],
                       [
                         "Be there by",
-                        "08:30"
+                        "08:45"
                       ],
                       [
                         "Morning",
